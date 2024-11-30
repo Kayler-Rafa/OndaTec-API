@@ -47,7 +47,7 @@ const professorController = {
         }
     },
     create: async (req, res) => {
-        const { email, senha } = req.body;
+        const { email, senha } = req.query;
 
         try {
             const professorExistente = await Professor.findOne({ email });

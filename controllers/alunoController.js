@@ -47,7 +47,7 @@ const alunoController = {
     },
 
     create: async (req, res) => {
-        const { email, senha } = req.body;
+        const { email, senha } = req.query;
         
         try {
             const alunoExistente = await Aluno.findOne({ email });
